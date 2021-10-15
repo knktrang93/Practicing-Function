@@ -43,10 +43,8 @@ const book = southWest.book;
 
 //call method
 book.call(american, 123, "Truc Khong");
-console.log(american);
 
 book.call(southWest, 456, "Trinh Khong");
-console.log(southWest);
 
 const united = {
   airline: "United",
@@ -54,12 +52,19 @@ const united = {
   bookings: [],
 };
 book.call(united, 269, "Triet Khong");
-console.log(united);
 
 //apply method
 const flightData = [144, "Tri Khong"];
 book.apply(united, flightData);
-console.log(united);
 
 //using call with spread operator
 book.call(united, ...flightData);
+
+//bind method
+const bookAM = book.bind(american);
+const bookSW = book.bind(southWest);
+
+bookAM(12, "Tre Khong");
+
+const bookAM123 = book.bind(american, 123);
+bookAM123("Trang Khong");
