@@ -1,13 +1,15 @@
 "use strict";
 
-const flight = "LH234";
-const trang = {
-  name: "Trang Khong",
-  passport: 233450005959,
-};
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
 
-const checkIn = function (flightNumber, passenger) {
-  flightNum = "LH999";
-};
+// greet("Helloo")("Trang");
 
-checkIn(flight, trang);
+//arrow function
+
+const greet = (greeting) => (name) => console.log(`${greeting} ${name}`);
+
+greet("Helloo")("Trang");
