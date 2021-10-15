@@ -57,3 +57,9 @@ book.call(united, 269, "Triet Khong");
 console.log(united);
 
 //apply method
+const flightData = [144, "Tri Khong"];
+book.apply(united, flightData);
+console.log(united);
+
+//using call with spread operator
+book.call(united, ...flightData);
