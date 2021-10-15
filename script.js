@@ -24,7 +24,7 @@ const southWest = {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
     );
-    this.bookings.push({ flight: `${this.iataCode}${flightNum}, name` });
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}, ${name}` });
   },
 };
 
@@ -39,4 +39,21 @@ const american = {
 
 const book = southWest.book;
 
-book(123, "Truc Khong");
+// book(123, "Truc Khong"); ==> doesn't work
+
+//call method
+book.call(american, 123, "Truc Khong");
+console.log(american);
+
+book.call(southWest, 456, "Trinh Khong");
+console.log(southWest);
+
+const united = {
+  airline: "United",
+  iataCode: "UA",
+  bookings: [],
+};
+book.call(united, 269, "Triet Khong");
+console.log(united);
+
+//apply method
