@@ -68,3 +68,11 @@ bookAM(12, "Tre Khong");
 
 const bookAM123 = book.bind(american, 123);
 bookAM123("Trang Khong");
+
+// //with eventlistener
+// southWest.planes = 300;
+// southWest.buyPlane = function () {
+//   console.log(this);
+//   this.planes++;
+//   console.log(this.planes);
+// };
